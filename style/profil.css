@@ -40,6 +40,14 @@ nav .navigator a{
 nav .navigator a:hover{
     background-color: var(--accent-color);
 }
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--text-color);
+    align-self: center;
+    z-index: 20;
+}
 .home{
     width: 100%;
     position: relative;
@@ -182,4 +190,107 @@ header h1::before{
     height: 100vh;
     border: var(--text-color) 1px solid;
     border-radius: 10px;
+}
+/* responsive tablet */
+@media (max-width: 1100px) {
+    nav{
+        padding: 5px 3%;
+    }
+    .sambutan{
+        padding: 50px 3%;
+    }
+    .visi{
+        padding: 50px 3%;
+    }
+    .misi{
+        display: block;
+    }
+    .misi img{
+        width: 100%;
+        height: auto;
+    }
+    .akreditasi-content{
+        padding: 50px 3%;
+        display: block;
+        text-align: center;
+    }
+    .akreditasi-content img{
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .guru-content{
+        padding: 50px 3%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .guru-card img{
+        height: 20vh;
+    }
+    .organisasi-img{
+        padding: 30px;
+    }
+    .organisasi-img img{
+        width: 100%;
+        height: auto;
+    }
+}
+/* responsive mobile */
+@media (max-width: 500px) {
+    nav {
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+    }
+
+    .navigator {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70%;
+        right: 3%; 
+        background-color: var(--accent-color);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        font-size: 20px;
+        overflow: hidden;
+        z-index: 15;
+        /* transisi */
+        max-height: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+
+    .navigator.active {
+        display: flex;
+        max-height: 500px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .navigator a {
+        padding: 20px;
+        width: 100%;
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    .menu-toggle {
+        display: block;
+        background-color: var(--accent-color);
+        border-radius: 5px;
+        padding: 2px 5px;
+        font-size: 25px;
+    }
+    .sambutan{
+        display: block;
+        text-align: center;
+    }
+    .sambutan img{
+        width: 50%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .guru-content{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
