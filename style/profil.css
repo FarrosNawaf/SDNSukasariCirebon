@@ -131,7 +131,7 @@ nav .navigator a:hover{
     font-weight: 500;
 }
 .misi img{
-    height: 70vw;
+    width: 50%;
 }
 header{
     padding: 50px 0;
@@ -171,8 +171,8 @@ header h1::before{
 .guru-content{
     padding: 50px 7%;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 .guru-content .guru-card{
     color: var(--text-color);
@@ -230,7 +230,7 @@ footer{
         grid-template-columns: repeat(3, 1fr);
     }
     .guru-card img{
-        height: 20vh;
+        height: 15vh;
     }
     .organisasi-img{
         padding: 30px;
@@ -299,5 +299,8 @@ footer{
     }
     .guru-content{
         grid-template-columns: repeat(2, 1fr);
+    }
+    .guru-card{
+        font-size: 12px;
     }
 }
